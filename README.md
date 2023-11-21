@@ -106,3 +106,8 @@ ffmpeg -i input.mkv -c copy output.mp4
 ```
 ffmpeg -i input.mkv -map 0:a:0 -c:a libmp3lame -q:a 3 output.mp3
 ```
+
+## Remux mp4 video with soft subs
+```
+ffmpeg -i input.mp4 -i input.srt -c copy -c:s mov_text output.mp4
+```
